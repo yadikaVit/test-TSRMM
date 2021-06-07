@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Рейтинг участников онлайн-игры</title>
+</head>
+
+<body>
+
+  <main class="main">
+    <h1>Рейтинг участников онлайн-игры</h1>
+
+    <section class="filters">
+      <form action="#" class="form-filters" autocomplete="off">
+        <div class="participant-filters">
+          <h2 class="filter-title">Сортировка игроков</h2>
+          <div class="age-button">
+            <span>По возрасту</span>
+            <div>
+              <button type="button" class="age-button-up button"></button>
+              <button type="button" class="age-button-down button"></button>
+            </div>
+          </div>
+          <div class="rating-button">
+            <span>По рейтингу</span>
+            <div>
+              <button type="button" class="rating-button-up button"></button>
+              <button type="button" class="rating-button-down button"></button>
+            </div>
+          </div>
+        </div>
+        <div class="participant-search">
+          <h2 class="filter-title">Поиск игрока</h2>
+          <div class="search-wrapper">
+            <fieldset class="search search-name">
+              <label class="search-label" for="second-name">Фамилия:</label>
+              <input id="second-name" name="second-name" type="search" placeholder="Иванов" minlength="2"
+                maxlength="20">
+              <button type="button" class="second-name-button button"></button>
+            </fieldset>
+            <fieldset class="search">
+              <label class="search-label" for="name">Имя:</label>
+              <input id="name" name="name" type="search" placeholder="Дмитрий" minlength="2" maxlength="20">
+              <button type="button" class="name-button button"></button>
+            </fieldset>
+          </div>
+        </div>
+      </form>
+    </section>
+
+    <section class="participant">
+      <div class="header-user-list">
+        <h2>Рейтинг участников</h2>
+        <button type="button" class="reset-button button">Очистить</button>
+      </div>
+      <div class="users-list">
+      </div>
+    </section>
+  </main>
+
+  <template id="user-template">
+    <div class="user-item">
+      <p class="number">1</p>
+      <div class="user-avatar">
+        <span class="avatar-name"></span>
+      </div>
+      <div>
+        <div class="user">
+          <p class="second-name">Фамилия</p>
+          <p class="user-name">Имя</p>
+          <p class="user-age">25</p>
+
+        </div>
+        <p class="position user-text">Должность</p>
+      </div>
+      <div class="scores-container">
+        <p class="scores">1200</p>
+        <p class="scores-text user-text">балла</p>
+      </div>
+    </div>
+  </template>
+
+  <script src="./filter.js"></script>
+
+</body>
+
+</html>
